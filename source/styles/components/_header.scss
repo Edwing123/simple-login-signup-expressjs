@@ -1,0 +1,30 @@
+.header {
+  background-color: darken($blue, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: $white;
+  }
+}
+
+.appTitle {
+  font-size: 1.8em;
+}
+
+.navigation {
+  display: flex;
+  font-size: 1em;
+}
+
+.navigationLink:link, .navigationLink:visited {
+  color: $white;
+  font-weight: 600;
+  margin: 0 0 0 18px;
+  font-size: 1.1em;
+}
+
+.navigationLink:hover {
+  color: darken($white, 15%);
+}

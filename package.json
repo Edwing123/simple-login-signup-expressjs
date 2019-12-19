@@ -1,0 +1,25 @@
+{
+  "name": "simple-login",
+  "version": "1.0.0",
+  "description": "simple login application with express",
+  "main": "app.js",
+  "author": "Edwing123",
+  "scripts": {
+    "serve": "nodemon app --ignore source/db/*.json --verbose",
+    "styles:compile": "sass --watch ./source/styles/main.scss ./public/css/main.css"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "shortid": "^2.2.15"
+  }
+}

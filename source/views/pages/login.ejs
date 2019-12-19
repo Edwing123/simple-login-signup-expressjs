@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/_head-common") %>
+
+    <!-- metadata information -->
+    <meta name="description" content="Login and see your user profile" />
+    <meta name="keywords" content="login page, username and password to login" />
+
+    <!-- title -->
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <%- include("../partials/_header") %>
+      <main class="main">
+        <section class="section">
+          <h2 class="sectionTitle">Login</h2>
+          <%- include("../partials/_form", { forLogin: true }) %>
+        </section>
+      </main>
+      <%- include("../partials/_footer") %>
+    </div>
+    <!-- scripts -->
+  </body>
+</html>

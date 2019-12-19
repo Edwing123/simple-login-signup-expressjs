@@ -1,0 +1,33 @@
+<% 
+let genders = ["male", "female", "other"]
+let url = forLogin ? "/auth/login" : "/auth/signup" 
+let buttonValue = forLogin ? "login" : "create account"
+let forSignUp = !forLogin
+%>
+<form action="<%- url %>" method="POST" class="form">
+  <div class="formGroup">
+    <label for="username" class="formLabel">Username</label>
+    <input type="text" class="formInput" name="username" id="username" />
+  </div>
+  <div class="formGroup">
+    <label for="password" class="formLabel">Password</label>
+    <input type="password" class="formInput" name="password" id="password" />
+  </div>
+  <% if (forSignUp) { %>
+    <div class="formGroup">
+      <label for="age" class="formLabel">Age</label>
+      <input type="number" min="0" max="100" class="formInput" name="age" id="age" />
+    </div>
+    <div class="formGroup">
+      <small class="formSubTitle">Tell us your gender</small>
+      <% genders.forEach((gender) => { %>
+        <label for="<%- gender %>" class="formLabel">
+          <input type="radio" name="gender" class="formRadio" id="<%- gender %>" value="<%- gender %>" /> <%- gender %>
+        </label>
+      <% }) %>
+    </div>
+  <% } %>
+  <div class="formGroup">
+    <input type="submit" class="formButton" value="<%- buttonValue %>" />
+  </div>
+</form>
